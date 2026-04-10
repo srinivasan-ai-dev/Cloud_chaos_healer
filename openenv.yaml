@@ -1,0 +1,24 @@
+spec_version: 1
+name: cc_healer
+version: 1.0.0
+description: "An autonomous SRE healing environment where AI agents monitor system metrics and execute corrective commands (restart_db, scale_gateway) to resolve infrastructure chaos while managing operational budgets."
+type: space
+runtime: fastapi
+app: server.app:app
+port: 7860
+tags:
+  - openenv
+  - cc-healer
+  - sre
+  - chaos-engineering
+  - real-world
+tasks:
+  - id: easy
+    description: "Single-service database failure with clear log evidence. Requires targeted restart."
+    grader: tasks.graders.grade_action
+  - id: medium
+    description: "Gateway latency spike requiring red herring dismissal and infrastructure scaling."
+    grader: tasks.graders.grade_action
+  - id: hard
+    description: "Cascading P0 outage involving auth failures and resource exhaustion. Requires prioritized command execution."
+    grader: tasks.graders.grade_action

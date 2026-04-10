@@ -1,0 +1,2 @@
+[console_scripts]
+server = cloud_chaos_healer.server.app:main
