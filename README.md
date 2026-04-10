@@ -2,7 +2,7 @@
 title: Cloud Chaos Healer
 emoji: "☁️"
 colorFrom: blue
-colorTo: black
+colorTo: gray
 sdk: docker
 app_port: 7860
 license: mit
@@ -13,7 +13,7 @@ tags:
   - chaos-engineering
   - reinforcement-learning
   - real-world
-short_description: Active SRE Healing & Infrastructure Remediation RL Environment
+short_description: Active SRE Healing & Infrastructure Remediation Env
 ---
 
 [![CI](https://github.com/Srinivasan-V/Cloud-Chaos-Healer/actions/workflows/ci.yml/badge.svg)](https://github.com/Srinivasan-V/Cloud-Chaos-Healer/actions/workflows/ci.yml)
