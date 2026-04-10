@@ -6,11 +6,19 @@
 
 """Cloud Chaos Healer Environment."""
 
-from .client import CloudChaosHealerEnv
-from .models import CloudChaosHealerAction, CloudChaosHealerObservation
+from .client import CcHealerEnv
+from .models import CcHealerAction, CcHealerObservation
+
+# Aliases for backward compatibility
+CloudChaosHealerEnv = CcHealerEnv
+CloudChaosHealerAction = CcHealerAction
+CloudChaosHealerObservation = CcHealerObservation
 
 __all__ = [
+    "CcHealerEnv",
+    "CcHealerAction",
+    "CcHealerObservation",
+    "CloudChaosHealerEnv",
     "CloudChaosHealerAction",
     "CloudChaosHealerObservation",
-    "CloudChaosHealerEnv",
 ]

@@ -6,6 +6,9 @@
 
 """Cloud Chaos Healer environment server components."""
 
-from .cloud_chaos_healer_environment import CloudChaosHealerEnvironment
+from .cloud_chaos_healer_environment import CcHealerEnvironment
 
-__all__ = ["CloudChaosHealerEnvironment"]
+# Alias for compatibility
+CloudChaosHealerEnvironment = CcHealerEnvironment
+
+__all__ = ["CcHealerEnvironment", "CloudChaosHealerEnvironment"]

@@ -26,10 +26,13 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
     from models import CcHealerAction, CcHealerObservation
-    from server.cc_healer_environment import CcHealerEnvironment
+    from server.cloud_chaos_healer_environment import CcHealerEnvironment
 except ImportError:
-    from cc_healer.models import CcHealerAction, CcHealerObservation
-    from cc_healer.server.cc_healer_environment import CcHealerEnvironment
+    from .cloud_chaos_healer_environment import CcHealerEnvironment
+    try:
+        from models import CcHealerAction, CcHealerObservation
+    except ImportError:
+        from ..models import CcHealerAction, CcHealerObservation
     
 # Create the app with web interface and WebSocket support
 app = create_app(
