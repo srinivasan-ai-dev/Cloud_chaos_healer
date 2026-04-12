@@ -16,9 +16,6 @@ tags:
 short_description: Active SRE Healing & Infrastructure Remediation Env
 ---
 
-[![CI](https://github.com/Srinivasan-V/Cloud-Chaos-Healer/actions/workflows/ci.yml/badge.svg)](https://github.com/Srinivasan-V/Cloud-Chaos-Healer/actions/workflows/ci.yml)
-[![Docker](https://github.com/Srinivasan-V/Cloud-Chaos-Healer/actions/workflows/docker.yml/badge.svg)](https://github.com/Srinivasan-V/Cloud-Chaos-Healer/actions/workflows/docker.yml)
-
 > [!NOTE]
 > This is a verified Phase 2 deep-validation submission for the **Meta × HuggingFace × Scaler OpenEnv Hackathon 2026**.
 
