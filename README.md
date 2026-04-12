@@ -130,9 +130,9 @@ The environment evaluates agents across 3 tiers, with rotating failure scenarios
 
 | Task ID | Difficulty | Active Challenge | Core Competency Evaluated |
 |---------|------------|------------------|---------------------------|
-| `easy` | 🟢 P2 Incident | DB Failure | [cite_start]Identifying explicit failures and executing targeted restarts. |
-| `medium` | 🟡 P1 Incident | Latency Spike | [cite_start]Managing gateway throughput while ignoring red-herring network logs. |
-| `hard` | 🔴 P0 Outage | Cascading Crash | [cite_start]Resolving auth-driven cascading failures under tight budget constraints. |
+| `easy` | 🟢 P2 Incident | DB Failure | Identifying explicit failures and executing targeted restarts. |
+| `medium` | 🟡 P1 Incident | Latency Spike | Managing gateway throughput while ignoring red-herring network logs. |
+| `hard` | 🔴 P0 Outage | Cascading Crash | Resolving auth-driven cascading failures under tight budget constraints. |
 
 ---
 
@@ -161,7 +161,7 @@ The environment evaluates agents across 3 tiers, with rotating failure scenarios
 Grading is strictly deterministic, rewarding system recovery while penalizing resource waste.
 
 - **Accuracy**: Correct healing commands receive high baseline rewards (0.80+).
-- **Efficiency**: Every action deducts from the 1000.0 budget. [cite_start]Agents that "spam" restarts are penalized.
+- **Efficiency**: Every action deducts from the 1000.0 budget. Agents that "spam" restarts are penalized.
 - **Stability**: Maintaining "OK" status throughout the episode generates incremental rewards.
 
 ---
