@@ -74,9 +74,9 @@ asyncio.run(main())
 
 ## 💡 Why This Problem?
 Standard LLM benchmarks focus on static triage. Cloud Chaos Healer moves to **Agentic Execution**:
-- [cite_start]**Resource Constraints** — Agents must resolve chaos while managing a strictly limited **Operational Budget**.
-- [cite_start]**Latency Management** — Rewards are tied to keeping response times below 100ms, simulating real-world user experience.
-- [cite_start]**Active State Change** — Every action (`restart`, `scale`) directly modifies the environment's health status.
+- **Resource Constraints** — Agents must resolve chaos while managing a strictly limited **Operational Budget**.
+- **Latency Management** — Rewards are tied to keeping response times below 100ms, simulating real-world user experience.
+- **Active State Change** — Every action (`restart`, `scale`) directly modifies the environment's health status.
 
 ---
 
@@ -144,7 +144,7 @@ The environment evaluates agents across 3 tiers, with rotating failure scenarios
 |-------|------|-------------|
 | `command` | `str` | The SRE command to execute (`restart_db`, `restart_api`, `scale_gateway`, `monitor`). |
 
-### [cite_start]Observation: `CcHealerObservation`
+###Observation: `CcHealerObservation`
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -158,17 +158,17 @@ The environment evaluates agents across 3 tiers, with rotating failure scenarios
 
 ## Reward Evaluation (State-Based Logic)
 
-[cite_start]Grading is strictly deterministic, rewarding system recovery while penalizing resource waste.
+Grading is strictly deterministic, rewarding system recovery while penalizing resource waste.
 
-- [cite_start]**Accuracy**: Correct healing commands receive high baseline rewards (0.80+).
+- **Accuracy**: Correct healing commands receive high baseline rewards (0.80+).
 - **Efficiency**: Every action deducts from the 1000.0 budget. [cite_start]Agents that "spam" restarts are penalized.
-- [cite_start]**Stability**: Maintaining "OK" status throughout the episode generates incremental rewards.
+- **Stability**: Maintaining "OK" status throughout the episode generates incremental rewards.
 
 ---
 
 ## Baseline Inference Scores
 
-[cite_start]Evaluation executed via `evaluate_models.py` using `Llama-3.3-70B` and `Qwen2.5-72B`.
+Evaluation executed via `evaluate_models.py` using `Llama-3.3-70B` and `Qwen2.5-72B`.
 
 | Tier | Task | Max Steps | Mean Score | Max |
 |---|---|---|---|---|
@@ -184,7 +184,7 @@ python evaluate_models.py
 
 ---
 
-## [cite_start]Deployment & Setup
+## Deployment & Setup
 
 ### Local Run
 ```bash
