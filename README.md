@@ -27,7 +27,7 @@ short_description: Active SRE Healing & Infrastructure Remediation Env
 
 # ☁️ Cloud Chaos Healer (CCH)
 
-[cite_start]An autonomous Site Reliability Engineering (SRE) Reinforcement Learning environment where AI agents don't just "talk" about outages—they resolve them. [cite: 102-105]
+An autonomous Site Reliability Engineering (SRE) Reinforcement Learning environment where AI agents don't just "talk" about outages—they resolve them.
 
 ```mermaid
 xychart-beta
@@ -37,7 +37,7 @@ xychart-beta
     bar [0.88, 0.81, 0.45, 0.30, 0.22]
 ```
 
-Production downtime costs organizations millions. [cite_start]Cloud Chaos Healer evaluates if an LLM can act as a Staff SRE by monitoring system metrics (latency, budget) and executing critical commands like `restart_db` or `scale_gateway` to restore system health in real-time. [cite: 119-122]
+Production downtime costs organizations millions. Cloud Chaos Healer evaluates if an LLM can act as a Staff SRE by monitoring system metrics (latency, budget) and executing critical commands like `restart_db` or `scale_gateway` to restore system health in real-time.
 
 ## Quick Start
 
@@ -77,14 +77,14 @@ asyncio.run(main())
 
 ## 💡 Why This Problem?
 Standard LLM benchmarks focus on static triage. Cloud Chaos Healer moves to **Agentic Execution**:
-- [cite_start]**Resource Constraints** — Agents must resolve chaos while managing a strictly limited **Operational Budget**. [cite: 119-122]
-- [cite_start]**Latency Management** — Rewards are tied to keeping response times below 100ms, simulating real-world user experience. [cite: 120-121]
-- [cite_start]**Active State Change** — Every action (`restart`, `scale`) directly modifies the environment's health status. [cite: 107-111]
+- [cite_start]**Resource Constraints** — Agents must resolve chaos while managing a strictly limited **Operational Budget**.
+- [cite_start]**Latency Management** — Rewards are tied to keeping response times below 100ms, simulating real-world user experience.
+- [cite_start]**Active State Change** — Every action (`restart`, `scale`) directly modifies the environment's health status.
 
 ---
 
 ## 🚀 Try It Now (No Setup Required)
-[cite_start]CCH exposes standard OpenEnv endpoints natively on HuggingFace Spaces. [cite: 128-130]
+CCH exposes standard OpenEnv endpoints natively on HuggingFace Spaces.
 
 ```bash
 # Health check
@@ -129,13 +129,13 @@ flowchart TD
 
 ## Tasks & Scenarios
 
-[cite_start]The environment evaluates agents across 3 tiers [cite: 114-116], with rotating failure scenarios to prevent hard-coding.
+The environment evaluates agents across 3 tiers, with rotating failure scenarios to prevent hard-coding.
 
 | Task ID | Difficulty | Active Challenge | Core Competency Evaluated |
 |---------|------------|------------------|---------------------------|
-| `easy` | 🟢 P2 Incident | DB Failure | [cite_start]Identifying explicit failures and executing targeted restarts. [cite: 115] |
-| `medium` | 🟡 P1 Incident | Latency Spike | [cite_start]Managing gateway throughput while ignoring red-herring network logs. [cite: 116] |
-| `hard` | 🔴 P0 Outage | Cascading Crash | [cite_start]Resolving auth-driven cascading failures under tight budget constraints. [cite: 116] |
+| `easy` | 🟢 P2 Incident | DB Failure | [cite_start]Identifying explicit failures and executing targeted restarts. |
+| `medium` | 🟡 P1 Incident | Latency Spike | [cite_start]Managing gateway throughput while ignoring red-herring network logs. |
+| `hard` | 🔴 P0 Outage | Cascading Crash | [cite_start]Resolving auth-driven cascading failures under tight budget constraints. |
 
 ---
 
@@ -145,9 +145,9 @@ flowchart TD
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `command` | `str` | [cite_start]The SRE command to execute (`restart_db`, `restart_api`, `scale_gateway`, `monitor`). [cite: 107-108] |
+| `command` | `str` | The SRE command to execute (`restart_db`, `restart_api`, `scale_gateway`, `monitor`). |
 
-### [cite_start]Observation: `CcHealerObservation` [cite: 108]
+### [cite_start]Observation: `CcHealerObservation`
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -161,17 +161,17 @@ flowchart TD
 
 ## Reward Evaluation (State-Based Logic)
 
-[cite_start]Grading is strictly deterministic, rewarding system recovery while penalizing resource waste. [cite: 117-122]
+[cite_start]Grading is strictly deterministic, rewarding system recovery while penalizing resource waste.
 
-- [cite_start]**Accuracy**: Correct healing commands receive high baseline rewards (0.80+). [cite: 117]
-- **Efficiency**: Every action deducts from the 1000.0 budget. [cite_start]Agents that "spam" restarts are penalized. [cite: 119-122]
-- [cite_start]**Stability**: Maintaining "OK" status throughout the episode generates incremental rewards. [cite: 120-121]
+- [cite_start]**Accuracy**: Correct healing commands receive high baseline rewards (0.80+).
+- **Efficiency**: Every action deducts from the 1000.0 budget. [cite_start]Agents that "spam" restarts are penalized.
+- [cite_start]**Stability**: Maintaining "OK" status throughout the episode generates incremental rewards.
 
 ---
 
 ## Baseline Inference Scores
 
-[cite_start]Evaluation executed via `evaluate_models.py` using `Llama-3.3-70B` and `Qwen2.5-72B`. [cite: 123-126]
+[cite_start]Evaluation executed via `evaluate_models.py` using `Llama-3.3-70B` and `Qwen2.5-72B`.
 
 | Tier | Task | Max Steps | Mean Score | Max |
 |---|---|---|---|---|
@@ -187,7 +187,7 @@ python evaluate_models.py
 
 ---
 
-## [cite_start]Deployment & Setup [cite: 132-135]
+## [cite_start]Deployment & Setup
 
 ### Local Run
 ```bash
